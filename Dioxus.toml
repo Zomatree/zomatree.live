@@ -7,10 +7,11 @@ asset_dir = "public"
 
 [web.app]
 title = "Zomatree.live"
+index_on_404 = false
 
 [web.watcher]
 reload_html = true
-watch_path = ["src", "public"]
+watch_path = ["src", "public", "index.html"]
 
 [web.resource]
 style = []
