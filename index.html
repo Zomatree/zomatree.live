@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Zomatree.live</title>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="style.css">
+  <script defer data-domain="zomatree.live" src="https://insights.imcharlie.me/js/script.js"></script>
+  <meta property="og:title" content="Hi, I'm Zomatree"/>
+  <meta property="og:url" content="https://zomatree.live/"/>
+  <meta property="og:image" content="/how_i_made_this_website.png"/>
+  <meta property="og:description" content="👋 I'm a programmer who works with Python, Rust and Javascript."/>
+
+  
+</head>
+<body>
+  <div id="main"></div>
+  <script type="module">
+    import init from "/./assets/dioxus/Zomatree-live.js";
+    init("/./assets/dioxus/Zomatree-live_bg.wasm").then(wasm => {
+      if (wasm.__wbindgen_start == undefined) {
+        wasm.main();
+      }
+    });
+  </script>
+  
+</body>
+</html>
