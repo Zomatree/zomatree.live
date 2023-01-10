@@ -1,6 +1,6 @@
 <script lang="ts">
     import cake from "$lib/assets/cake.jpg";
-    import og_image from "$lib/assets/og_imag.png";
+    import og_image from "$lib/assets/og_image.png";
 
     export function scroll_to_blog() {
         let bottom = document.getElementById("bottom")!;
