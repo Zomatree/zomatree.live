@@ -11,6 +11,9 @@
 <svelte:head>
     <meta property="og:description" content="👋 I'm a programmer who works with Python, Rust and Javascript.">
     <meta property="og:image" content={ og_image }>
+    <link rel="canonical" href= { og_image }>
+    <link rel="image_src" href= { og_image }>
+    <meta name="twitter:card" content="summary_large_image">
 </svelte:head>
 
 <div class="main">
