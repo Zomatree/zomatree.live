@@ -129,6 +129,21 @@ body::-webkit-scrollbar {
     text-decoration: none;
 }
 
+.projects-section {
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.projects-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
 .intro-small-text {
     font-size: 1.2rem;
 }
