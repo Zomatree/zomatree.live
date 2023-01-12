@@ -1,3 +1,5 @@
+@import url("https://rsms.me/inter/inter.css");
+
 :root {
     --bg-1: #0b0e14;
     --bg-2: #101218;
@@ -83,7 +85,7 @@ body::-webkit-scrollbar {
 }
 
 .blog-card {
-    max-width: 200px;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,10 +148,11 @@ body::-webkit-scrollbar {
     justify-content: space-between;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 800px) {
     .intro-inner {
         flex-direction: column;
         min-height: 25vh;
+        text-align: center;
     }
     .blog-post-grid {
         display: flex;
