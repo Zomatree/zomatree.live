@@ -69,40 +69,14 @@ body::-webkit-scrollbar {
 }
 
 .header {
-    color: var(--primary-3)
+    color: var(--primary-3);
+    text-align: center;
 }
 
-.blog-section {
-    margin-left: 100px;
-    margin-right: 100px;
-    height: 50vh;
-}
-
-.blogs {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-.blog-card {
-    max-width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--bg-2);
-    border-radius: 5px;
-    text-decoration: none;
-    box-shadow: 2px 2px 8px 1px black;
-}
-
-.blog-card-image {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    max-width: 100%;
-}
-
-.blog-card-title {
-    color: var(--primary-3)
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .error-page {
@@ -129,11 +103,12 @@ body::-webkit-scrollbar {
     text-decoration: none;
 }
 
-.projects-section {
+.section {
     margin-left: 100px;
     margin-right: 100px;
     display: flex;
     flex-direction: column;
+    min-height: 50vh;
 }
 
 .projects-row {
@@ -148,48 +123,11 @@ body::-webkit-scrollbar {
     font-size: 1.2rem;
 }
 
-.blog-post {
-    padding-left: 20%;
-    padding-right: 20%;
-}
-
-.blog-content {
-    color: var(--primary-4);
-}
-
-.blog-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 823px) {
     .intro-inner {
         flex-direction: column;
         min-height: 25vh;
         text-align: center;
-    }
-    .blog-post-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .blogs {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .blog-card {
-        max-width: none;
-        min-width: 80%;
-    }
-
-    .blog-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     .error-page {
@@ -212,8 +150,12 @@ body::-webkit-scrollbar {
         padding-right: 10px;
     }
 
-    .blog-post {
-        padding-left: 10px;
-        padding-right: 10px
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        align-items: center;
     }
 }

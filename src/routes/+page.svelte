@@ -1,5 +1,6 @@
 <script lang="ts">
-    import Project from "$lib/components/Project.svelte";
+    import ProjectCard from "$lib/components/ProjectCard.svelte";
+    import BlogCard from "$lib/components/BlogCard.svelte";
 
     import cake from "$lib/assets/cake.jpg";
     import og_image from "$lib/assets/og_image.png";
@@ -41,9 +42,12 @@
             <svg fill="#CAB8FD" height="20px" width="20px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 330 330" xml:space="preserve"><g id="XMLID_169_"><path id="XMLID_197_" d="M304.394,139.394l-139.39,139.393L25.607,139.393c-5.857-5.857-15.355-5.858-21.213,0.001c-5.858,5.858-5.858,15.355,0,21.213l150.004,150c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.394l149.996-150c5.858-5.858,5.858-15.355,0-21.213C319.749,133.536,310.251,133.535,304.394,139.394z"/><path id="XMLID_221_" d="M154.398,190.607c2.813,2.813,6.628,4.393,10.606,4.393s7.794-1.581,10.606-4.394l149.996-150c5.858-5.858,5.858-15.355,0-21.213c-5.857-5.858-15.355-5.858-21.213,0l-139.39,139.393L25.607,19.393c-5.857-5.858-15.355-5.858-21.213,0c-5.858,5.858-5.858,15.355,0,21.213L154.398,190.607z"/></g></svg>
         </div>
     </div>
-    <div class="projects-section">
-        <div class="projects-row">
-            <Project
+    <div class="section">
+        <h1 class="header" id="projects">
+            Projects
+        </h1>
+        <div class="grid">
+            <ProjectCard
                 title="Revolt"
                 tag="Chat Platform"
                 tag_colour="#ff4654"
@@ -51,23 +55,21 @@
                 github_url="https://github.com/revoltchat"
                 description="Revolt is an open source user-first chat platform, built with Rust and Javascript it is an alternative to Discord."
             />
-            <Project
+            <ProjectCard
                 title="Revolt.py"
                 tag="Python Library"
                 tag_colour="#ffd342"
                 github_url="https://github.com/revoltchat/revolt.py"
                 description="API Wrapper written in Python for the Revolt API."
             />
-            <Project
+            <ProjectCard
                 title="Spec"
                 tag="Python Library"
                 tag_colour="#ffd342"
                 github_url="https://github.com/Zomatree/Spec"
                 description="Validation and serialization library for python which has support for advance features such as tagged enums, renaming and custom validation."
             />
-        </div>
-        <div class="projects-row">
-            <Project
+            <ProjectCard
                 title="Zomatree.live"
                 tag="Website"
                 tag_colour="var(--primary-1)"
@@ -75,7 +77,7 @@
                 github_url="https://github.com/zomatree/zomatree.live"
                 description="My personal website to show my projects and my blog."
             />
-            <Project
+            <ProjectCard
                 title="R"
                 tag="Python Framework"
                 tag_colour="#3673a5"
@@ -85,27 +87,17 @@
         </div>
     </div>
     <div id="bottom"/>
-    <div class="blog-section">
+    <div class="section">
         <h1 class="header" id="blogs">
             Blog Posts
         </h1>
-        <div class="blogs">
-            <a class="blog-card" href="/blog/cake">
-                <img class="blog-card-image" alt="Slice of chocolate cake on white plate" src={cake}/>
-                <h3 class="blog-card-title">Cake</h3>
-            </a>
-            <a class="blog-card" href="/blog/cake">
-                <img class="blog-card-image" alt="Slice of chocolate cake on white plate" src={cake}/>
-                <h3 class="blog-card-title">Cake</h3>
-            </a>
-            <a class="blog-card" href="/blog/cake">
-                <img class="blog-card-image" alt="Slice of chocolate cake on white plate" src={cake}/>
-                <h3 class="blog-card-title">Cake</h3>
-            </a>
-            <a class="blog-card" href="/blog/cake">
-                <img class="blog-card-image" alt="Slice of chocolate cake on white plate" src={cake}/>
-                <h3 class="blog-card-title">Cake</h3>
-            </a>
+        <div class="grid">
+            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
+            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
+            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
+            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
+            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
+            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
         </div>
     </div>
 </div>

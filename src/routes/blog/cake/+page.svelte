@@ -1,5 +1,6 @@
 <script lang="ts">
     import Cake from "$lib/assets/cake.jpg";
+    import "../blog.scss"
 </script>
 
 <div class="blog-post">
