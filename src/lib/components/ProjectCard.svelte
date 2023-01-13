@@ -16,6 +16,12 @@
         padding: 20px;
         display: flex;
         flex-direction: column;
+        box-shadow: 2px 2px 4px 1px black;
+        transition: all .1s ease-in-out
+    }
+
+    .project-card:hover {
+        transform: scale(1.05);
     }
 
     .title-row {
@@ -40,7 +46,7 @@
         height: min-content;
         padding: 8px 10px;
         font-size: 14px;
-        font-weight: 300;
+        font-weight: 400;
         border-radius: 50px;
         color: black;
     }

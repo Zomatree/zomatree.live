@@ -84,6 +84,13 @@
                 github_url="https://github.com/zomatree/r"
                 description="React-like agnostic GUI framework for Python to make reactive websites and desktop apps."
             />
+            <ProjectCard
+                title="Homepage"
+                tag="Website"
+                tag_colour="#aad94c"
+                github_url="https://github.com/zomatree/homepage"
+                url="https://home.zomatree.live"
+                description="Simple homepage with search and bookmarks for your browser's default page."            />
         </div>
     </div>
     <div id="bottom"/>
@@ -92,7 +99,6 @@
             Blog Posts
         </h1>
         <div class="grid">
-            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
             <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
             <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
             <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>

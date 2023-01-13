@@ -15,6 +15,11 @@
         border-radius: 5px;
         text-decoration: none;
         box-shadow: 2px 2px 8px 1px black;
+        transition: all .1s ease-in-out
+    }
+
+    .blog-card:hover {
+        transform: scale(1.05);
     }
 
     .blog-card-image {
