@@ -15,6 +15,10 @@
     background-color: var(--bg-1);
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0px;
 }
@@ -72,7 +76,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     cursor: pointer;
-    transition: all .2s ease-in-out
+    transition: all .3s ease-in-out
 }
 
 .down-arrow:hover {
@@ -119,7 +123,7 @@ body::-webkit-scrollbar {
     margin-right: 100px;
     display: flex;
     flex-direction: column;
-    min-height: 50vh;
+    margin-bottom: 50px;
 }
 
 .projects-row {
@@ -132,6 +136,18 @@ body::-webkit-scrollbar {
 
 .intro-small-text {
     font-size: 1.2rem;
+}
+
+.text {
+    color: var(--primary-3)
+}
+
+.about-me-content {
+    max-width: 80%;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 130%;
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 823px) {
@@ -168,5 +184,9 @@ body::-webkit-scrollbar {
         margin-left: 20px;
         margin-right: 20px;
         align-items: center;
+    }
+
+    .about-me-content {
+        font-size: 1.2rem;
     }
 }

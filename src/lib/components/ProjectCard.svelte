@@ -29,10 +29,10 @@
         color: var(--primary-4);
         align-items: center;
         margin-bottom: 10px;
+        justify-content: space-between;
     }
 
     .project-title {
-        flex-grow: 1;
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -51,10 +51,6 @@
         color: black;
     }
 
-    .project-description {
-        color: var(--primary-3)
-    }
-
     .grow {
         flex-grow: 1;
     }
@@ -71,11 +67,11 @@
         </div>
     </div>
 
-    <span class="project-description grow">
+    <span class="text grow">
         {description}
     </span>
 
-    <span class="project-description">
+    <span class="text">
         <a class="website-link" href={github_url} target="_blank" rel="nooopener noreferrer">Github </a>
         {#if url}
         • <a class="website-link" href={url} target="_blank" rel="nooopener noreferrer">Website</a>
