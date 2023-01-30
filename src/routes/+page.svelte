@@ -47,12 +47,11 @@
             About Me
         </h1>
         <p class="text about-me-content">
-            I am a 17-year-old senior level developer with experience in multiple programming languages, including Rust, Python, and Typescript.
-            I have a passion for coding and am constantly looking to expand my skills and knowledge in the field.
-            I am highly motivated and dedicated to creating efficient, high-quality code that is both functional and user-friendly.
-            I am always eager to take on new challenges and am confident that I have the skills and experience necessary to excel in any project or task.
-            I am excited to continue to grow and develop as a developer and look forward to working with others in the industry to create innovative and impactful technology.
+            I am a 17-year-old senior level developer with a strong background in Rust, Python, and TypeScript. I have a passion for coding and am always looking to expand my skills and knowledge in the field. I am highly motivated and dedicated to creating efficient, high-quality code that is both functional and user-friendly. My experience in multiple programming languages allows me to approach problems from different angles and find the best solution for the task at hand. I am always eager to take on new challenges and am confident in my ability to excel in any project or task. I am excited to continue to grow and develop as a developer and look forward to working with others in the industry to create innovative and impactful technology.
         </p>
+        <a href="/cv.pdf" class="cv-link">
+            [My CV]
+        </a>
     </div>
     <div id="bottom"/>
     <div class="section">
