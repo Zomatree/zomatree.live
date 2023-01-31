@@ -2,8 +2,9 @@
     import ProjectCard from "$lib/components/ProjectCard.svelte";
     import BlogCard from "$lib/components/BlogCard.svelte";
 
-    import cake from "$lib/assets/cake.jpg";
-    import og_image from "$lib/assets/og_image.png";
+    import Cake from "$lib/assets/cake.jpg";
+    import OGImage from "$lib/assets/og_image.png";
+    import LargeKine from "$lib/assets/large_kine.png";
 
     export function scroll_to_blog() {
         let bottom = document.getElementById("bottom")!;
@@ -13,8 +14,8 @@
 
 <svelte:head>
     <meta property="og:description" content="👋 I'm a programmer who works with Python, Rust and Typescript.">
-    <meta property="og:image" content={ og_image }>
-    <link rel="image_src" href= { og_image }>
+    <meta property="og:image" content={ OGImage }>
+    <link rel="image_src" href= { OGImage }>
     <meta name="twitter:card" content="summary_large_image">
     <meta name="description" content="I'm a programmer who works with Python, Rust and Typescript">
 </svelte:head>
@@ -90,10 +91,10 @@
                 description="My personal website to show my projects and my blog."
             />
             <ProjectCard
-                title="R"
+                title="Kine"
                 tag="Python Framework"
                 tag_colour="#3673a5"
-                github_url="https://github.com/zomatree/r"
+                github_url="https://github.com/zomatree/kine"
                 description="React-like agnostic GUI framework for Python to make reactive websites and desktop apps."
             />
             <ProjectCard
@@ -111,11 +112,8 @@
             Blog Posts
         </h1>
         <div class="grid">
-            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
-            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
-            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
-            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
-            <BlogCard title="Cake" href="/blog/cake" image={cake} alt="Slice of chocolate cake on white plate"/>
+            <BlogCard title="Why I Made Kine" href="/blog/kine" image={LargeKine} alt="Logo of Kine and text saying Kine"/>
+            <BlogCard title="Cake" href="/blog/cake" image={Cake} alt="Slice of chocolate cake on white plate"/>
         </div>
     </div>
 </div>

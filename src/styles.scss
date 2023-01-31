@@ -1,5 +1,13 @@
 @import url("https://rsms.me/inter/inter.css");
 
+@font-face {
+    font-family: 'Fira Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url(https://fonts.gstatic.com/s/firamono/v14/N0bX2SlFPv1weGeLZDtgJv7S.woff2) format('woff2');
+}
+
 :root {
     --bg-1: #0b0e14;
     --bg-2: #101218;
@@ -156,6 +164,17 @@ body::-webkit-scrollbar {
     text-align: center;
     line-height: 130%;
     margin: 0 auto;
+}
+
+.inline-codeblock {
+    background-color: #21242b;
+    padding: 1px 4px;
+    border-radius: 2px;
+}
+
+.link {
+    color: var(--primary-1);
+    text-decoration: none;
 }
 
 @media screen and (max-width: 823px) {
