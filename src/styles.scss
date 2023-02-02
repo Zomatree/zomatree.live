@@ -29,6 +29,7 @@
 
 body {
     margin: 0px;
+    //padding-bottom: 10px;
 }
 
 body::-webkit-scrollbar {
@@ -175,6 +176,10 @@ body::-webkit-scrollbar {
 .link {
     color: var(--primary-1);
     text-decoration: none;
+}
+
+.rounded-image {
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 823px) {

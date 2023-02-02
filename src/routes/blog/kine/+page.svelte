@@ -2,14 +2,17 @@
     import { python, bash } from "svelte-highlight/languages";
 
     import Blog from "$lib/components/Blog.svelte";
-    import Kine from "$lib/assets/kine.png";
-
     import Codeblock from "$lib/components/Codeblock.svelte";
+
+    import Kine from "$lib/assets/kine.png";
+	import ChromeImage from '$lib/assets/chrome_P5Xo6HKINX.png';
 </script>
 
 <Blog title="Why I Made Kine">
     <img src={ Kine } width="50%" alt="Logo of Kine"/>
-
+    <p>
+        <a class="link" href="https://github.com/zomatree/kine">Link to the Github.</a>
+    </p>
     <p>
         Python has been used for making web apps for a long time, Instagram for example is a giant Django program and people continue to make websites using frameworks such as Flask and Django,
         however most of these options rely on using static HTML templates, which are cumbersome to work with, they only allow passing in static values and hard to update, you must either refresh
@@ -43,8 +46,7 @@ import asyncio
 def app(cx: Scope):
     return cx.render(p["Hello World!"])
 
-asyncio.run(start_web(app()))
-        `}/>
+asyncio.run(start_web(app()))`}/>
 
         This code doesnt do much, all it does is display "Hello World!" in the browser but its a simple example and shows off the basic structure of a program.
     </p>
@@ -71,10 +73,15 @@ asyncio.run(start_web(app()))
         The steps to make a WebAssembly app is very simple, Kine comes with a CLI which can be used to create the project and build the project into the static content
 
         <Codeblock language={ bash } code={`\
-$ python -m pip install kine      # installs the library
-$ python -m kine new my_kine_app  # creates the project
-$ cd my_kine_app                  # navigates to the project folder
-$ python -m kine build            # build the project
-$ python -m kine serve            # runs a web server to serve the built web app`}/>
+python -m pip install kine      # installs the library
+python -m kine new my_kine_app  # creates the project
+cd my_kine_app                  # navigates to the project folder
+python -m kine build            # build the project
+python -m kine serve            # runs a web server to serve the built web app`}/>
+
+        After this you can head to your browser similar to before and the entire python app is ran on the browser.
+
     </p>
+    <img class="rounded-image" src = { ChromeImage } width="60%"/>
+    <p></p>
 </Blog>
