@@ -24,6 +24,7 @@
         border-radius: 5px;
         font-family: "Fira Mono";
         font-size: 14px;
+        width: 100%;
     }
 
     .codeblock-header-item {

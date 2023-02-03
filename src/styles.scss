@@ -169,7 +169,7 @@ body::-webkit-scrollbar {
 
 .inline-codeblock {
     background-color: #21242b;
-    padding: 1px 4px;
+    padding: 0px 4px;
     border-radius: 2px;
 }
 
@@ -180,6 +180,10 @@ body::-webkit-scrollbar {
 
 .rounded-image {
     border-radius: 5px;
+}
+
+.full-width-image {
+    width: 70%;
 }
 
 @media screen and (max-width: 823px) {
@@ -221,5 +225,9 @@ body::-webkit-scrollbar {
     .about-me-content {
         font-size: 1.1rem;
         max-width: 90%;
+    }
+
+    .full-width-image {
+        width: 100%
     }
 }

@@ -9,6 +9,12 @@
         justify-content: space-between;
     }
 
+    .blog-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     :global(.blog-content > p) {
         color: var(--primary-4);
     }
@@ -22,7 +28,7 @@
         padding-right: 20%;
     }
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 823px) {
         .blog-post {
             padding-left: 10px;
             padding-right: 10px;

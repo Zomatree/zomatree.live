@@ -5,11 +5,14 @@
     import Codeblock from "$lib/components/Codeblock.svelte";
 
     import Kine from "$lib/assets/kine.png";
-	import ChromeImage from '$lib/assets/chrome_P5Xo6HKINX.png';
+	import ChromeImage1 from '$lib/assets/chrome_P5Xo6HKINX.png';
+    import ChromeImage2 from "$lib/assets/chrome_qEPtgq1Ep4.png";
+    import ChromeImage3 from "$lib/assets/chrome_68jVM6k04Z.gif";
+
 </script>
 
 <Blog title="Why I Made Kine">
-    <img src={ Kine } width="50%" alt="Logo of Kine"/>
+    <img class="full-width-image" src={ Kine } width="50%" alt="Logo of Kine"/>
     <p>
         <a class="link" href="https://github.com/zomatree/kine">Link to the Github.</a>
     </p>
@@ -82,6 +85,59 @@ python -m kine serve            # runs a web server to serve the built web app`}
         After this you can head to your browser similar to before and the entire python app is ran on the browser.
 
     </p>
-    <img class="rounded-image" src = { ChromeImage } width="60%"/>
-    <p></p>
+    <img class="full-width-image" src = { ChromeImage1 }/>
+    <p>
+        From here you can use the variety of elements, components and hooks to build up the website.
+    </p>
+    <p>
+        For example lets make a simple button and show the amount of times i pressed. Lets start with making the nodes then make it update with state.
+    </p>
+    <Codeblock language={ python } code={`\
+@component
+def app(cx: Scope):
+    return cx.render(div[
+        button[
+            "Click Me!"
+        ],
+        p[
+            "0"
+        ]
+    ])`}/>
+    <img class="full-width-image" src = { ChromeImage2 }/>
+    <p>
+        Both are shown but the button doesnt update the number, lets fix that.
+    </p>
+    <Codeblock language={ python } code={`\
+@component
+def app(cx: Scope):
+    value = use_state(cx, lambda: 0)  # create a local state with a default value of 0
+
+    return cx.render(div[
+        button(
+            onclick=lambda _: value.modify(lambda v: v + 1)  # create an onclick event which modifies the state to add 1
+        )[
+            "Click Me!"
+        ],
+        p[
+            f"{value.get()}"  # show the current value of the state
+        ]
+    ])`}/>
+    <p>
+        Now when we run this again and press the button it will automatically incremement the counter.
+    </p>
+    <img class="full-width-image" src = { ChromeImage3 }/>
+    <p>
+        Because Kine runs the function everytime an update is required, we need to be careful to not cause side-effects, this is why <span class="inline-codeblock">use_state</span>
+        takes a function instead of the inital value as-is - not all state is as simple as an integer.
+    </p>
+    <p>
+        <span class="inline-codeblock">use_state</span> uses <span class="inline-codeblock">use_hook</span> internally which is the building block for making all hooks in Kine, it runs the function given to it and cache the value for future reruns of the component
+    </p>
+    <Codeblock language={ python } code={`\
+@component
+def app(cx: Scope):
+    x = cx.use_hook(lambda: 2 + 2)  # intensive math - we only want to calculate it once
+
+    return cx.render(p[f"{x}"])`}/>
+    <p>Other hooks exist as well, <span class="inline-codeblock">use_future</span> can be used to run coroutines</p>
 </Blog>
