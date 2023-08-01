@@ -9,6 +9,79 @@
         let bottom = document.getElementById("bottom")!;
         bottom.scrollIntoView({behavior: "smooth"});
     }
+
+    interface Project {
+        title: string;
+        description: string;
+        tag: string;
+        tag_colour: string;
+        url?: string | null;
+        github_url: string;
+    }
+
+    interface Blog {
+        href: string;
+        alt: string;
+        image: string;
+        title: string;
+    }
+
+    const projects: Project[] = [
+        {
+            title: "Revolt",
+            tag: "Chat Platform",
+            tag_colour: "#ff4654",
+            url: "https://revolt.chat",
+            github_url: "https://github.com/revoltchat",
+            description: "Revolt is an open source user-first chat platform, built with Rust and Typescript it is an alternative to Discord."
+        },
+        {
+            title:"Revolt.py",
+            tag:"Python Library",
+            tag_colour:"#ffd342",
+            github_url:"https://github.com/revoltchat/revolt.py",
+            description:"API Wrapper written in Python for the Revolt API."
+        },
+        {
+            title: "Kine",
+            tag: "Python Framework",
+            tag_colour: "#3673a5",
+            github_url: "https://github.com/zomatree/kine",
+            description: "React-like agnostic GUI framework for Python to make reactive websites and desktop apps.\nSee "
+        },
+        {
+            title: "Spec",
+            tag: "Python Library",
+            tag_colour: "#ffd342",
+            github_url: "https://github.com/Zomatree/Spec",
+            description: "Validation and serialization library for python which has support for advance features like tagged enums, renaming and custom validation."
+        },
+        {
+            title: "Zomatree.live",
+            tag: "Website",
+            tag_colour: "var(--primary-1)",
+            url: "https://zomatree.live",
+            github_url: "https://github.com/zomatree/zomatree.live",
+            description: "My personal website to show my projects and my blog."
+        },
+        {
+            title: "Homepage",
+            tag: "Website",
+            tag_colour: "#aad94c",
+            github_url: "https://github.com/zomatree/homepage",
+            url: "https://home.zomatree.live",
+            description: "Simple homepage with search and bookmarks for your browser's default page."
+        }
+    ]
+
+    const blogs: Blog[] = [
+        {
+            title: "Cake",
+            href: "/blog/cake",
+            image: cake,
+            alt: "Slice of chocolate cake on white plate"
+        },
+    ]
 </script>
 
 <svelte:head>
@@ -62,51 +135,9 @@
             Projects
         </h1>
         <div class="grid">
-            <ProjectCard
-                title="Revolt"
-                tag="Chat Platform"
-                tag_colour="#ff4654"
-                url="https://revolt.chat"
-                github_url="https://github.com/revoltchat"
-                description="Revolt is an open source user-first chat platform, built with Rust and Typescript it is an alternative to Discord."
-            />
-            <ProjectCard
-                title="Revolt.py"
-                tag="Python Library"
-                tag_colour="#ffd342"
-                github_url="https://github.com/revoltchat/revolt.py"
-                description="API Wrapper written in Python for the Revolt API."
-            />
-            <ProjectCard
-                title="Spec"
-                tag="Python Library"
-                tag_colour="#ffd342"
-                github_url="https://github.com/Zomatree/Spec"
-                description="Validation and serialization library for python which has support for advance features like tagged enums, renaming and custom validation."
-            />
-            <ProjectCard
-                title="Zomatree.live"
-                tag="Website"
-                tag_colour="var(--primary-1)"
-                url="https://zomatree.live"
-                github_url="https://github.com/zomatree/zomatree.live"
-                description="My personal website to show my projects and my blog."
-            />
-            <ProjectCard
-                title="Kine"
-                tag="Python Framework"
-                tag_colour="#3673a5"
-                github_url="https://github.com/zomatree/kine"
-                description="React-like agnostic GUI framework for Python to make reactive websites and desktop apps."
-            />
-            <ProjectCard
-                title="Homepage"
-                tag="Website"
-                tag_colour="#aad94c"
-                github_url="https://github.com/zomatree/homepage"
-                url="https://home.zomatree.live"
-                description="Simple homepage with search and bookmarks for your browser's default page."
-            />
+            {#each projects as project}
+                <ProjectCard {...project}/>
+            {/each}
         </div>
     </div>
     <div class="section">
@@ -114,36 +145,9 @@
             Blog Posts
         </h1>
         <div class="grid">
-            <BlogCard
-                title="Cake"
-                href="/blog/cake"
-                image={cake}
-                alt="Slice of chocolate cake on white plate"
-            />
-            <BlogCard
-                title="Cake"
-                href="/blog/cake"
-                image={cake}
-                alt="Slice of chocolate cake on white plate"
-            />
-            <BlogCard
-                title="Cake"
-                href="/blog/cake"
-                image={cake}
-                alt="Slice of chocolate cake on white plate"
-            />
-            <BlogCard
-                title="Cake"
-                href="/blog/cake"
-                image={cake}
-                alt="Slice of chocolate cake on white plate"
-            />
-            <BlogCard
-                title="Cake"
-                href="/blog/cake"
-                image={cake}
-                alt="Slice of chocolate cake on white plate"
-            />
+            {#each blogs as blog}
+                <BlogCard {...blog}/>
+            {/each}
         </div>
     </div>
 </div>
