@@ -1,0 +1,25 @@
+.blog-content {
+    color: var(--primary-4);
+}
+
+.blog-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.blog-content {
+    color: var(--primary-4);
+}
+
+.blog-post {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+@media screen and (max-width: 800px) {
+    .blog-post {
+        padding-left: 10px;
+        padding-right: 10px
+    }
+}

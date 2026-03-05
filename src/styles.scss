@@ -1,0 +1,201 @@
+@import url("https://rsms.me/inter/inter.css");
+
+:root {
+    --bg-1: #0b0e14;
+    --bg-2: #101218;
+    --bg-3: #6c5980;
+    --primary-1: #9179F0;
+    --primary-2: #AD96DE;
+    --primary-3: #CAB8FD;
+    --primary-4: #e0d5ff;
+
+    width: 100%;
+    height: 100%;
+    font-family: Inter,sans-serif;
+    background-color: var(--bg-1);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.intro {
+    height: 100vh;
+}
+
+.intro-inner {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 20%;
+    color: var(--primary-1);
+    cursor: default;
+    flex-direction: row;
+    min-width: 75vw;
+    margin: auto;
+    -webkit-box-pack: justify;
+    justify-content: space-around;
+}
+
+.name {
+    font-weight: 300;
+    font-size: 3rem;
+}
+
+.emphasis {
+    font-weight: 900;
+    color: var(--primary-3);
+    text-shadow: 2px 1px 3px var(--primary-1);
+}
+
+.github-link {
+    color: var(--primary-2);
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: right;
+    text-decoration: none;
+    display: block;
+    transition: all .05s ease-in-out
+}
+
+.github-link:hover {
+    text-shadow: 0px 0px 3px var(--primary-1);
+}
+
+.down-arrow {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s ease-in-out
+}
+
+.down-arrow:hover {
+    transform: scale(120%);
+}
+
+.header {
+    color: var(--primary-3);
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.error-page {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 20vw;
+    padding-top: 30vh;
+}
+
+.very-large-text {
+    font-size: 80px;
+}
+
+.large-text {
+    font-size: 30px;
+}
+
+.go-home {
+    text-align: end;
+}
+
+.go-home-link {
+    color: var(--primary-1);
+    text-decoration: none;
+}
+
+.cv-link {
+    color: var(--bg-3);
+    text-decoration: none;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.section {
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.projects-row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+
+.intro-small-text {
+    font-size: 1.2rem;
+}
+
+.text {
+    color: var(--primary-3)
+}
+
+.about-me-content {
+    max-width: 60%;
+    font-size: 1.3rem;
+    text-align: center;
+    line-height: 140%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 823px) {
+    .intro-inner {
+        flex-direction: column;
+        min-height: 25vh;
+        text-align: center;
+    }
+
+    .error-page {
+        padding-right: 0px;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .error-page-inner {
+        text-align: center;
+    }
+
+    .go-home {
+        text-align: unset;
+    }
+
+    .name {
+        padding-top: 20vh;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        align-items: center;
+    }
+
+    .about-me-content {
+        font-size: 1.1rem;
+        max-width: 90%;
+    }
+}
